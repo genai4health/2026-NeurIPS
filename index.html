@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GenAI4Health @ NeurIPS 2026</title>
+  <meta name="title" content="The Third Workshop on GenAI for Health @ NeurIPS 2026">
+  <meta name="description" content="The Third Workshop on GenAI for Health: Agentic Systems, Clinical Trust, and Future Potential at NeurIPS 2026.">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://genai4health.github.io/2026-NeurIPS/">
+  <meta property="og:title" content="The Third Workshop on GenAI for Health @ NeurIPS 2026">
+  <meta property="og:description"
+    content="Agentic Systems, Clinical Trust, and Future Potential in Generative AI for Health.">
+  <meta property="og:image" content="https://genai4health.github.io/2026-NeurIPS/public/genai-health-hero.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://genai4health.github.io/2026-NeurIPS/">
+  <meta name="twitter:title" content="The Third Workshop on GenAI for Health @ NeurIPS 2026">
+  <meta name="twitter:description"
+    content="Agentic Systems, Clinical Trust, and Future Potential in Generative AI for Health.">
+  <meta name="twitter:image" content="https://genai4health.github.io/2026-NeurIPS/public/genai-health-hero.png">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://genai4health.github.io/2026-NeurIPS/">
+  <script>
+    (function () {
+      const key = 'genai4health-theme';
+      const choice = ['light', 'dark'].includes(localStorage.getItem(key))
+        ? localStorage.getItem(key)
+        : 'light';
+      const theme = choice;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.themeChoice = choice;
+      document.documentElement.style.colorScheme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles/css/reset.css">
+  <link rel="stylesheet" href="styles/css/main.css?v=pc-people-jul02">
+  <link rel="stylesheet" href="styles/css/animations.css">
+  <link rel="stylesheet" href="styles/css/responsive.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="public/genai-favicon.png?v=genai4health-2026">
+  <link rel="shortcut icon" type="image/png" href="public/genai-favicon.png?v=genai4health-2026">
+  <style>
+    @media (max-width: 991px) {
+      #navbar {
+        display: none !important;
+      }
+    }
+
+    #header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+
+    /* Sponsor links hover ring and image radius */
+    .sponsors-logos a {
+      border-radius: 16px;
+      padding: 6px;
+      display: inline-flex;
+      align-items: center;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .sponsors-logos a:hover,
+    .sponsors-logos a:focus-visible {
+      box-shadow: 0 0 0 3px var(--focus-ring);
+    }
+
+    .sponsors-logos a img {
+      border-radius: 14px;
+      display: block;
+    }
+
+    /* Schedule cards hover effects */
+    .schedule-card {
+      transition: all var(--transition-fast);
+    }
+
+    .schedule-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: scale(1.02);
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex header sticky-top">
+    <div class="navbar-container">
+      <div class="navbar-title-group"
+        style="display: flex; width: 100%; flex-direction: row; align-items: center; justify-content: flex-start; gap: 1rem;">
+        <a href="https://neurips.cc/" target="_blank" class="navbar-logo">
+          <img src="images/neurips.svg" alt="NeurIPS_LOGO" style="width: 100%; height: 64px;">
+        </a>
+        <a href="#home" class="navbar-title" style="font-size: 1.5rem;color: var(--color-primary); font-weight: bold; font-family: 'Palatino', 'Palatino Linotype', serif; display: flex; align-items: center; justify-content: flex-start; width: auto; gap: 1rem;">GenAI4Health 2026</a>
+      </div>
+
+      <nav id="navbar" class="navbar" style="display: flex; justify-content: flex-end;">
+
+        <a class="nav-link scrollto" href="#speakers">Speakers</a>
+        <a class="nav-link scrollto" href="#schedule">Agenda</a>
+        <a class="nav-link scrollto" href="#call-for-papers">Call for Papers</a>
+        <a class="nav-link scrollto" href="#organizers">Organizers</a>
+        <!-- Program Committee navigation is hidden pending confirmation. -->
+        <!-- Sponsors navigation is hidden pending confirmation. -->
+      </nav>
+      <div class="theme-switcher" role="group" aria-label="Theme">
+        <button class="theme-option" type="button" data-theme-option="light" aria-pressed="false" title="Light theme">
+          <i class="bi bi-sun" aria-hidden="true"></i>
+          <span>Light</span>
+        </button>
+        <button class="theme-option" type="button" data-theme-option="dark" aria-pressed="false" title="Dark theme">
+          <i class="bi bi-moon-stars" aria-hidden="true"></i>
+          <span>Dark</span>
+        </button>
+      </div>
+    </div>
+  </header><!-- End Header -->
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero health-hero fade-in">
+      <div class="health-hero-art" aria-hidden="true">
+        <svg class="health-illustration-source" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="presentation">
+          <defs>
+            <linearGradient id="healthWash" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fcfeff" />
+              <stop offset="0.56" stop-color="#eaf6ff" />
+              <stop offset="1" stop-color="#cdeaff" />
+            </linearGradient>
+            <radialGradient id="healthGlow" cx="50%" cy="44%" r="58%">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.96" />
+              <stop offset="0.72" stop-color="#eff9ff" stop-opacity="0.52" />
+              <stop offset="1" stop-color="#c6e7fb" stop-opacity="0" />
+            </radialGradient>
+            <linearGradient id="panelStroke" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e5f6ff" stop-opacity="0.96" />
+              <stop offset="1" stop-color="#8bc8ef" stop-opacity="0.5" />
+            </linearGradient>
+            <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="4" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <rect width="1600" height="900" fill="url(#healthWash)" />
+          <rect width="1600" height="900" fill="url(#healthGlow)" />
+          <g class="health-network health-network-left">
+            <path d="M0 228 L125 270 L216 198 L302 266 L414 230 L510 322" />
+            <path d="M0 366 L108 336 L206 395 L312 344 L420 405 L530 352" />
+            <path d="M16 525 L126 464 L237 508 L338 450 L448 514 L560 468" />
+            <path d="M68 171 L126 270 L206 395 L237 508" />
+            <path d="M302 266 L312 344 L338 450" />
+            <path d="M414 230 L420 405 L448 514" />
+            <g class="health-nodes">
+              <circle cx="125" cy="270" r="7" /><circle cx="216" cy="198" r="5" />
+              <circle cx="302" cy="266" r="6" /><circle cx="206" cy="395" r="7" />
+              <circle cx="312" cy="344" r="5" /><circle cx="126" cy="464" r="6" />
+              <circle cx="338" cy="450" r="7" /><circle cx="448" cy="514" r="5" />
+            </g>
+          </g>
+          <g class="health-brain" filter="url(#softGlow)" transform="translate(42 66) scale(0.84)">
+            <path class="health-profile" d="M111 651 C88 611 80 562 92 514 C104 465 131 426 175 402 C220 377 275 380 316 410 C353 437 370 476 366 520 C364 545 374 563 394 578 L421 599 L416 622 L385 630 L385 661 L350 661 C342 708 313 742 266 756 L204 756 C170 731 141 698 111 651 Z" />
+            <path class="health-circuit" d="M148 500 C171 469 208 453 244 466 C279 478 299 511 293 546 C288 575 269 593 246 609 L246 704 M173 503 L173 598 L207 598 L207 692 M270 490 L270 531 L310 531 M132 558 L157 558 L157 648 L190 648" />
+            <path class="health-circuit" d="M181 479 L211 508 L245 480 L279 516 M147 581 L192 554 L237 579 L282 551" />
+            <g class="health-brain-nodes">
+              <circle cx="171" cy="496" r="5" /><circle cx="211" cy="506" r="5" />
+              <circle cx="246" cy="477" r="5" /><circle cx="281" cy="514" r="5" />
+              <circle cx="155" cy="556" r="5" /><circle cx="193" cy="552" r="5" />
+              <circle cx="239" cy="578" r="5" /><circle cx="286" cy="548" r="5" />
+              <circle cx="207" cy="692" r="5" /><circle cx="246" cy="704" r="5" />
+            </g>
+            <text x="211" y="558" text-anchor="middle">AI</text>
+          </g>
+          <g class="health-medical-icons">
+            <g class="health-icon health-icon-heart"><circle cx="116" cy="305" r="40" /><path d="M92 304 L104 304 L111 289 L121 323 L130 299 L143 299" /></g>
+            <g class="health-icon health-icon-dna"><circle cx="327" cy="326" r="38" /><path d="M314 302 C339 313 339 337 314 350 M340 302 C315 313 315 337 340 350 M318 310 L336 310 M318 321 L336 321 M318 333 L336 333 M318 343 L336 343" /></g>
+            <g class="health-icon health-icon-plus"><circle cx="79" cy="671" r="37" /><path d="M79 650 L79 692 M58 671 L100 671" /></g>
+            <g class="health-icon health-icon-pill"><circle cx="330" cy="734" r="37" /><path d="M313 748 C304 739 304 725 313 716 L324 705 C333 696 347 696 356 705 C365 714 365 728 356 737 L345 748 C336 757 322 757 313 748 Z M322 707 L353 738" /></g>
+          </g>
+          <g class="health-clinical-panel health-clinical-panel-top">
+            <rect x="1206" y="252" width="240" height="198" rx="20" /><rect x="1230" y="277" width="74" height="66" rx="9" />
+            <path class="health-plus-mark" d="M1267 291 L1267 329 M1248 310 L1286 310" /><rect x="1320" y="277" width="101" height="20" rx="5" /><rect x="1320" y="311" width="74" height="12" rx="5" />
+            <rect x="1230" y="360" width="91" height="15" rx="5" /><rect x="1230" y="389" width="137" height="12" rx="5" /><path class="health-shield" d="M1392 356 L1423 370 L1423 405 C1423 426 1409 440 1392 447 C1375 440 1361 426 1361 405 L1361 370 Z M1378 400 L1388 410 L1408 387" />
+          </g>
+          <g class="health-clinical-panel health-clinical-panel-bottom">
+            <rect x="1152" y="494" width="150" height="190" rx="18" /><path class="health-chart" d="M1175 626 L1175 542 L1280 542 M1186 606 L1201 583 L1217 594 L1237 560 L1253 576 L1273 550" /><rect x="1175" y="641" width="83" height="10" rx="5" /><rect x="1175" y="661" width="58" height="10" rx="5" />
+            <rect x="1324" y="494" width="130" height="151" rx="18" /><path class="health-lungs" d="M1389 520 C1363 525 1348 552 1349 590 L1349 612 C1370 612 1385 599 1389 578 M1389 520 C1415 525 1430 552 1429 590 L1429 612 C1408 612 1393 599 1389 578 M1389 520 L1389 607" />
+          </g>
+          <g class="health-network health-network-right">
+            <path d="M1458 227 L1537 214 L1600 267 M1445 338 L1515 371 L1600 342 M1450 495 L1526 460 L1600 513 M1466 625 L1533 670 L1600 633 M1515 371 L1526 460 L1533 670" />
+            <g class="health-nodes"><circle cx="1537" cy="214" r="6" /><circle cx="1515" cy="371" r="7" /><circle cx="1526" cy="460" r="5" /><circle cx="1533" cy="670" r="7" /><circle cx="1450" cy="495" r="6" /><circle cx="1466" cy="625" r="5" /></g>
+          </g>
+          <g class="health-projection" filter="url(#softGlow)"><ellipse cx="1354" cy="755" rx="198" ry="48" /><ellipse cx="1354" cy="755" rx="152" ry="35" /><ellipse cx="1354" cy="755" rx="106" ry="23" /><ellipse cx="1354" cy="755" rx="52" ry="11" /><path class="health-scan-line" d="M1354 716 L1354 544" /></g>
+          <g class="health-data-streams"><path d="M0 760 C220 670 344 835 542 745 S842 830 1038 735 S1330 824 1600 728" /><path d="M0 798 C210 712 355 862 547 780 S851 855 1044 770 S1354 856 1600 778" /><path d="M0 838 C188 755 368 878 570 816 S878 890 1080 807 S1372 887 1600 824" /></g>
+        </svg>
+        <svg class="health-wave-overlay" viewBox="0 0 1600 260" preserveAspectRatio="none" role="presentation">
+          <path class="health-wave-line health-wave-line-one" d="M-80 172 C130 85 282 228 480 150 S788 224 987 132 S1298 210 1680 88" />
+          <path class="health-wave-line health-wave-line-two" d="M-60 204 C154 120 294 245 502 181 S803 247 1028 160 S1324 239 1660 138" />
+          <path class="health-wave-line health-wave-line-three" d="M-40 236 C176 156 335 264 540 211 S848 270 1067 197 S1372 258 1640 180" />
+        </svg>
+      </div>
+      <div class="container" style="position:relative;z-index:1;">
+        <h1 class="display-text-palatino">
+          <span class="hero-title-top">The Third Workshop on</span>
+          <span class="hero-title-main">GenAI for Health</span>
+          <span class="hero-title-subtitle">Agentic Systems, Clinical Trust, and Future Potential</span>
+        </h1>
+        <div class="hero-workshop-text">GenAI4Health @ NeurIPS 2026<br>December 11-12, 2026 · Sydney, Australia</div>
+        <a href="https://x.com/GenAI4Health" class="hero-social-link" target="_blank" rel="noopener noreferrer" aria-label="Follow @GenAI4Health for the latest updates">
+          <i class="bi bi-twitter-x" aria-hidden="true"></i>
+          <span>Follow @GenAI4Health for the latest updates</span>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- Speakers Section -->
+    <section id="speakers" class="fade-in">
+      <div class="container">
+        <div class="section-header-component"><div class="section-header-row"><span class="section-header-title">Speakers</span><span class="section-header-subtitle">GenAI4Health @ NeurIPS 2026</span></div></div>
+        <div class="organizers-grid genai-people-grid"><a href="https://research.google/people/105667/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/pushmeet-kohli.jpg" alt="Pushmeet Kohli" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Pushmeet Kohli</div><div class="organizer-org">Google DeepMind</div></div></a><a href="https://www.karansinghal.com/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/karan-singhal.jpeg" alt="Karan Singhal" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Karan Singhal</div><div class="organizer-org">OpenAI</div></div></a><a href="https://www.james-zou.com/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/zou.jpg" alt="James Zou" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">James Zou</div><div class="organizer-org">Stanford University</div></div></a><a href="https://profiles.sydney.edu.au/jinman.kim" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/jinman-kim.png" alt="Jinman Kim" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Jinman Kim</div><div class="organizer-org">University of Sydney</div></div></a><a href="https://www.linkedin.com/in/haiderwarraich/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/Haider_WarraichMD.jpg" alt="Haider Warraich" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Haider Warraich</div><div class="organizer-org">ARPA-H</div></div></a><a href="https://www.bittermanlab.org/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/danielle-bitterman.webp" alt="Danielle Bitterman" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Danielle Bitterman</div><div class="organizer-org">Harvard Medical School</div></div></a><a href="https://researchers.mq.edu.au/en/persons/enrico-coiera/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/enrico-coiera.jpeg" alt="Enrico Coiera" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Enrico Coiera</div><div class="organizer-org">Australian Institute of Health Innovation</div></div></a><a href="https://profiles.sydney.edu.au/liliana.laranjo" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/liliana-laranjo.jpeg" alt="Liliana Laranjo" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Liliana Laranjo</div><div class="organizer-org">University of Sydney</div></div></a><a href="https://mingyuliu.net/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/ming-yu-liu.jpg" alt="Ming-Yu Liu" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Ming-Yu Liu</div><div class="organizer-org">NVIDIA</div></div></a><a href="https://people.eecs.berkeley.edu/~svlevine/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/sergey-levine.png" alt="Sergey Levine" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Sergey Levine</div><div class="organizer-org">UC Berkeley</div></div></a><a href="https://robotics.stanford.edu/~cbfinn/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/chelsea-finn.jpg" alt="Chelsea Finn" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Chelsea Finn</div><div class="organizer-org">Stanford University</div></div></a><a href="https://www.microsoft.com/en-us/research/people/hoifung/" class="organizer-card genai-speaker-card"><img src="public/data/images/speakers/hoifung-poon.jpg" alt="Hoifung Poon" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Hoifung Poon</div><div class="organizer-org">Microsoft Research</div></div></a></div>
+      </div>
+    </section>
+
+    <!-- Agenda Section -->
+    <section id="schedule" class="schedule fade-in">
+      <div class="container">
+        <div class="section-header-component"><div class="section-header-row"><span class="section-header-title">Agenda</span><span class="section-header-subtitle">GENAI4HEALTH @ NEURIPS 2026</span></div></div>
+        <p class="genai-section-copy">Tentative schedule. Session details, speakers, and the workshop day will be announced.</p>
+        <div class="schedule-timeline genai-agenda-timeline">
+          <div class="genai-agenda-heading">Morning Session</div>
+          <div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">8:00-8:10</div><div class="schedule-entry-session">Opening Remarks</div></div>
+</div>
+<div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">8:10-10:10</div><div class="schedule-entry-session">Keynote Session I: Four keynote talks (including Q&amp;A)</div></div>
+</div>
+<div class="schedule-timeline-row genai-agenda-break">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">10:10-10:30</div><div class="schedule-entry-session">Morning Coffee Break</div></div>
+</div>
+<div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">10:30-11:00</div><div class="schedule-entry-session">Panel Discussion I: Frontier agentic/multimodal models and clinical trust</div></div>
+</div>
+<div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">11:00-11:45</div><div class="schedule-entry-session">Contributed Talks I: Three research talks</div></div>
+</div>
+<div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">11:45-12:00</div><div class="schedule-entry-session">Session Buffer</div></div>
+</div>
+<div class="schedule-timeline-row genai-agenda-break">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">12:00-1:00</div><div class="schedule-entry-session">Lunch Break</div></div>
+</div>
+          <div class="genai-agenda-heading">Afternoon Session</div>
+          <div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">1:00-3:00</div><div class="schedule-entry-session">Keynote Session II: Four keynote talks (including Q&amp;A)</div></div>
+</div>
+<div class="schedule-timeline-row genai-agenda-break">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">3:00-3:20</div><div class="schedule-entry-session">Afternoon Coffee Break</div></div>
+</div>
+<div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">3:20-3:50</div><div class="schedule-entry-session">Panel Discussion II: Ambient, conversational, and embodied systems for health</div></div>
+</div>
+<div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">3:50-4:40</div><div class="schedule-entry-session">Interactive Poster Session</div></div>
+</div>
+<div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">4:40-4:50</div><div class="schedule-entry-session">Award Ceremony</div></div>
+</div>
+<div class="schedule-timeline-row">
+  <div class="schedule-duration"></div><div class="schedule-rail"><span></span></div>
+  <div class="schedule-entry"><div class="schedule-entry-time">4:50-5:00</div><div class="schedule-entry-session">Closing Remarks</div></div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call for Papers Section -->
+    <section id="call-for-papers" class="fade-in">
+      <div class="container genai-section-copy">
+        <div class="section-header-component"><div class="section-header-row"><span class="section-header-title">Call for Papers</span><span class="section-header-subtitle">GenAI4Health @ NeurIPS 2026</span></div></div>
+        <h3 class="genai-cfp-about">About</h3>
+        <p>Building on two successful editions at <a href="https://genai4health.github.io/2024-NeurIPS/" target="_blank" rel="noopener noreferrer">NeurIPS 2024</a> and <a href="https://genai4health.github.io/2025-NeurIPS/" target="_blank" rel="noopener noreferrer">NeurIPS 2025</a>, the third GenAI4Health workshop convenes machine learning researchers, healthcare professionals, policy experts, and clinical practitioners to advance capable, safe, equitable, and trusted generative AI for health. This year, we additionally introduce a forward-looking track on next-generation human-AI interaction - spanning ambient, conversational, and embodied systems for care.</p>
+        <p>Sydney, Australia. December 11-12, 2026.</p>
+        <h3>Topics of Interest</h3>
+        <p>We invite submissions of original, unpublished work related to Generative AI in healthcare.</p>
+        <div class="bento-section"><div class="bento-list">
+          <article class="bento-topic"><span class="bento-num">1</span><div class="bento-topic-content"><h4 class="bento-title">Frontier Models for Health</h4><p class="bento-desc">We welcome submissions advancing the frontier capabilities of foundation models in healthcare. This track spans the full spectrum of modern medical AI - from agentic systems and clinical reasoning to multimodal learning over text, imaging, audio, video, waveform, and EHR data - with an emphasis on methods that translate into real clinical impact.</p><details class="genai-topic-details"><summary>Topics include, but are not limited to:</summary><ul><li>Agentic medical AI systems</li><li>Reasoning in clinical foundation models</li><li>Multimodal learning across text, image, audio, video, waveform, and EHR data</li><li>Retrieval-augmented generation and medical knowledge integration</li><li>Foundation models for diagnosis, prognosis, triage, and care planning</li><li>Tool use, planning, and autonomous task execution in healthcare settings</li><li>Clinical LLMs and domain-adapted medical foundation models</li><li>Multimodal copilot architectures for clinicians and care teams</li><li>Longitudinal patient modeling</li><li>General-purpose methods for robust, scalable healthcare AI</li></ul></details></div></article>
+          <article class="bento-topic"><span class="bento-num">2</span><div class="bento-topic-content"><h4 class="bento-title">Trustworthy AI, Policy, Human-AI Collaboration &amp; Adoption</h4><p class="bento-desc">Approaches to ensuring the safety, robustness, and fairness of generative AI in medical contexts, and strategies for responsible real-world deployment. This track invites work at the intersection of technical rigor, clinical practice, and policy - from safety evaluation and red teaming to human oversight and the practical challenges of integrating AI into clinical workflows.</p><details class="genai-topic-details"><summary>Topics include, but are not limited to:</summary><ul><li>AI nurse copilots and clinical decision support</li><li>Surgical AI and safety-critical clinical applications</li><li>Safety benchmarks and evaluation frameworks for medical GenAI</li><li>Misuse detection and prevention</li><li>Red teaming and adversarial testing practices</li><li>Explainability, transparency, and interpretability in clinical AI</li><li>Ethical evaluation, health disparities, and bias mitigation</li><li>Human oversight and clinician-in-the-loop systems</li><li>Human-AI collaboration and trust calibration in care teams</li><li>Regulatory alignment (e.g., FDA) and international standards for AI in healthcare</li><li>Deployment, adoption, and change management in clinical workflows</li><li>Post-deployment monitoring and real-world performance evaluation</li></ul></details></div></article>
+          <article class="bento-topic"><span class="bento-num">3</span><div class="bento-topic-content"><h4 class="bento-title">Toward 360&deg; AI Care: Ambient, Conversational &amp; Embodied Systems for Health</h4><p class="bento-desc">A forward-looking track on next-generation human-AI interaction paradigms in medicine. As AI moves beyond the chat box into clinics, homes, and everyday care, this track explores systems that listen, converse, remember, and act - spanning ambient intelligence, voice-first interfaces, and embodied agents that support patients, caregivers, and clinicians across the full arc of care.</p><details class="genai-topic-details"><summary>Topics include, but are not limited to:</summary><ul><li>Voice agents for patients and clinicians</li><li>Ambient scribes and passive clinical documentation</li><li>Conversational AI for care delivery, triage, and follow-up</li><li>Longitudinal patient interaction, memory, and continuity of care</li><li>AI companions, coaches, and virtual care navigators</li><li>Multimodal interactive systems combining speech, text, vision, and context</li><li>Context-aware assistants embedded in clinical environments</li><li>Care coordination across patients, caregivers, and providers</li><li>Embodied and agentic interfaces for healthcare tasks</li><li>Speech understanding and synthesis for medical dialogue (e.g., accents, disfluencies, emotion)</li><li>Turn-taking, interruption handling, and real-time interaction in clinical conversations</li><li>Accessibility and inclusive design for aging populations and patients with impairments</li><li>Evaluation of conversational and ambient systems in real-world care settings</li></ul></details></div></article>
+        </div></div>
+        <!-- Camera-ready guidelines will be published after the submission deadline.
+        <h3 class="genai-cfp-camera-ready">Camera-Ready Submission Guidelines</h3>
+        <ul class="genai-list">
+          <li><strong>Review Feedback:</strong> Please carefully address all reviewer feedback and thoroughly proofread your paper for clarity and consistency.</li>
+          <li><strong>LaTeX Format:</strong> Format your paper using the NeurIPS 2026 LaTeX package with the following workshop options: <code>\usepackage[dblblindworkshop,final]{neurips_2026}</code>.</li>
+          <li><strong>Workshop Title:</strong> Include the workshop title in your paper by adding: <code>\workshoptitle{The Third Workshop on GenAI for Health: Agentic Systems, Clinical Trust, and Future Potential}</code>.</li>
+          <li><strong>Public Availability:</strong> Your camera-ready paper will be made publicly available on OpenReview after TBA, unless you contact the organizers before the deadline to opt out.</li>
+        </ul>
+        -->
+        <h3 class="genai-cfp-important-dates">Important Dates</h3>
+        <table class="important-dates">
+          <tr class="important-date-row"><td>Paper Submission Deadline</td><td><strong>Sep 5, 2026</strong></td></tr>
+          <tr class="important-date-row"><td>Acceptance Notification</td><td><strong>Sep 29, 2026</strong></td></tr>
+          <tr class="important-date-row"><td>Camera-ready Submission</td><td><strong>TBA</strong></td></tr>
+          <tr class="important-date-row"><td>Workshop Day</td><td><strong>TBA</strong></td></tr>
+        </table>
+        <p class="genai-cfp-deadline-note"><strong>All deadlines are at 11:59 PM AoE (Anywhere on Earth).</strong></p>
+        <h3>Submission Tracks</h3>
+        <p>Research, demonstration, and position papers may address any of the three topic areas. We encourage multidisciplinary submissions involving stakeholders from healthcare, public policy, and adjacent fields.</p>
+        <div class="genai-track-grid">
+          <article class="genai-track-panel">
+            <header><h4>Research Papers</h4><span class="genai-track-page-limit">Up to 9 pages</span></header>
+            <div class="genai-track-panel-content"><p class="genai-track-summary">The core of the program: methodological advances and empirical studies in generative AI for health.</p><div><h5>What we expect.</h5><p>Research papers should be complete, self-contained works: a clearly stated problem, a described method, and empirical evidence supporting the claims. Experiments should include appropriate baselines and evaluation protocols (e.g., held-out test data, ablations where relevant). Work in progress is acceptable only if the current results already substantiate the central claim - promising directions without supporting evidence are better suited as short position papers.</p></div><div><h5>What reviewers will assess.</h5><p>(1) Technical soundness and rigor of the evaluation; (2) novelty of the method, benchmark, dataset, or findings; (3) relevance and potential impact for health; (4) clarity of presentation. A Research Paper does not need to be at the level of a full NeurIPS main-conference paper in scope, but its claims must be well supported by the evidence presented.</p></div></div>
+          </article>
+          <article class="genai-track-panel">
+            <header><h4>Demonstration Papers</h4><span class="genai-track-page-limit">Up to 5 pages</span></header>
+            <div class="genai-track-panel-content"><p class="genai-track-summary">Working systems, applications, and tools relevant to generative AI in health.</p><div><h5>What we expect.</h5><p>Demonstration papers should describe a functioning system - deployed, in pilot, or in a working prototype state - including its architecture, intended users, and use context. A comprehensive quantitative evaluation is not required; however, submissions should include evidence that the system works as described (e.g., screenshots, example interactions, a video link, usage statistics, or preliminary user feedback). Mockups or purely conceptual designs are not a fit for this track.</p></div><div><h5>What reviewers will assess.</h5><p>(1) Whether the system is real and functional; (2) relevance and usefulness to health stakeholders; (3) technical interest of the system design; (4) clarity of the demonstration plan.</p></div></div>
+          </article>
+          <article class="genai-track-panel">
+            <header><h4>Position Papers</h4><span class="genai-track-page-limit">Up to 5 pages</span></header>
+            <div class="genai-track-panel-content"><p class="genai-track-summary">Perspectives, analyses, and proposals on policy, governance, evaluation practices, or deployment strategies for generative AI in health.</p><div><h5>What we expect.</h5><p>Position papers should advance a clear, well-argued thesis. New experiments are not required, but arguments must be grounded in evidence - literature, regulatory precedent, clinical experience, or documented deployments. A strong position paper engages seriously with counterarguments rather than only advocating one side.</p></div><div><h5>What reviewers will assess.</h5><p>(1) Clarity and significance of the position; (2) quality and grounding of the argument; (3) potential to provoke productive discussion in the community; (4) multidisciplinary relevance.</p></div></div>
+          </article>
+        </div>
+        <section class="genai-submission-module" aria-labelledby="submit-your-paper-title">
+          <div class="genai-submission-module-intro">
+            <h3 id="submit-your-paper-title">Submit Your Paper</h3>
+            <p>Choose the appropriate OpenReview submission track for your paper.</p>
+          </div>
+          <div class="genai-submission-actions">
+            <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health" target="_blank" rel="noopener noreferrer">Research Papers <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health_Demonstration_Paper_Track" target="_blank" rel="noopener noreferrer">Demonstration Papers <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health_Position_Paper_Track" target="_blank" rel="noopener noreferrer">Position Papers <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </section>
+        <h3>Submission Format Requirements</h3>
+        <ul class="genai-list">
+          <li>You must format your submission using the <a href="https://neurips.cc/Conferences/2026/MainTrackHandbook" target="_blank" rel="noopener noreferrer">NeurIPS 2026 LaTeX style file</a>. The NeurIPS Paper Checklist is not required.</li>
+          <li>Use <code>\usepackage{neurips_2026}</code> without options to ensure the submission is anonymous.</li>
+          <li>All page limits exclude acknowledgments, references, and appendix.</li>
+          <li>Papers may be rejected without consideration of their merits if they fail to meet the submission requirements.</li>
+          <li>We encourage multidisciplinary submissions involving stakeholders from healthcare, public policy, or adjacent fields to ensure practical relevance and responsible innovation.</li>
+          <li>Supplementary materials (code, data, videos) may be submitted as appendices.</li>
+          <li>Papers submitted to the workshop <strong>must not</strong> have been previously published at another venue at the time of submission.</li>
+          <li>The accepted papers will be non-archival (NOT included in proceedings or any form of publication).</li>
+          <li>Non-archival status means papers can be submitted to other venues after the workshop.</li>
+          <li>Accepted workshop papers (after the camera-ready stage) will be made publicly available by default. However, authors may choose to opt out, in which case their paper (PDF file) will not appear on OpenReview. A reminder will be sent to authors before the camera-ready stage.</li>
+        </ul>
+        <h3>Review Process</h3>
+        <ul class="genai-list">
+          <li><strong>Platform:</strong> All submissions are made through OpenReview (portal link to be posted on this page). All submitting authors need an OpenReview account; new account approval can take several days, so please register early.</li>
+          <li><strong>Double-blind review:</strong> Submissions must be fully anonymized: no author names, affiliations, identifying acknowledgments, or non-anonymized links (e.g., a GitHub repository revealing authorship). Use <code>\usepackage{neurips_2026}</code> without options to keep the submission anonymous. Violations may lead to desk rejection.</li>
+          <li><strong>Number of reviews:</strong> Each submission receives at least two reviews from the program committee, matched by topic area and track.</li>
+          <li><strong>Author response:</strong> There is no author rebuttal or response stage. Given the short turnaround between the submission deadline and notification, decisions are made based on reviews and program committee discussion only. Please ensure your submission is self-contained and anticipates likely questions (e.g., in a limitations section).</li>
+          <li><strong>Confidentiality:</strong> Submissions are visible only to assigned reviewers and organizers during review. Rejected submissions will not be made public.</li>
+        </ul>
+        <h3>Publication Policy: Non-Archival Status &amp; Dual Submission</h3>
+        <p><strong>We know these policies generate the most questions - please read this section carefully.</strong></p>
+        <p>GenAI4Health is a non-archival workshop. Accepted papers will not be published in any proceedings and will not be considered a formal (archival) publication. Acceptance is a recognition by the workshop community, not a publication of record.</p>
+        <h4>What this means for you, concretely:</h4>
+        <ul class="genai-list">
+          <li><strong>You may submit your workshop paper to other venues afterwards.</strong> Because acceptance here is non-archival, presenting at GenAI4Health does not preclude subsequent submission of the same or extended work to archival conferences (e.g., NeurIPS, ICML, ICLR, CHIL, ML4H proceedings track) or journals. Authors retain full copyright of their work.</li>
+          <li><strong>Work under review elsewhere may be submitted here,</strong> provided this does not violate the <em>other</em> venue's dual-submission or anonymity policy. It is the authors' responsibility to check the other venue's rules (note: some venues prohibit concurrent workshop submissions or public posting - check before you submit).</li>
+          <li><strong>Previously published work may not be submitted.</strong> Papers that have already appeared in an archival venue (conference proceedings or journal) at the time of submission are not eligible. Non-archival preprints (e.g., arXiv) are fine and do not count as prior publication.</li>
+          <li><strong>Public availability.</strong> Accepted papers will be made publicly available on OpenReview by default after the camera-ready stage. Authors may opt out, in which case the PDF will not be posted; a reminder will be sent before the camera-ready deadline. Posting on OpenReview is a courtesy listing, not an archival publication.</li>
+        </ul>
+        <h3>Authorship Policy</h3>
+        <p><strong>To maintain the integrity and transparency of the review process, the following authorship rules will be strictly enforced:</strong></p>
+        <ul class="genai-list">
+          <li><strong>No authors may be added after the submission deadline.</strong> This applies to all stages after submission, including review, camera-ready preparation, and any subsequent versions of the paper.</li>
+          <li><strong>Author reordering is permitted for accepted papers,</strong> provided all listed authors consent to the change.</li>
+          <li><strong>Author removal after submission requires written consent from all authors,</strong> including the author being removed. Requests must be sent to the program chairs with a clear justification.</li>
+        </ul>
+        <h3>Presentation &amp; Awards</h3>
+        <ul class="genai-list">
+          <li>All accepted papers will be presented with posters.</li>
+          <li>Oral/spotlight presentations will be selected from the accepted papers.</li>
+          <li>Three Outstanding Paper Awards will be selected, one for each paper track.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Organizers Section -->
+    <section id="organizers" class="fade-in">
+      <div class="container">
+        <div class="section-header-component genai-people-section-header"><div class="section-header-row"><span class="section-header-title">Organizers</span></div></div>
+        <div class="organizers-grid genai-people-grid"><a href="https://jiayuanding100.github.io" class="organizer-card"><img src="public/data/images/organizers/jiayuan-ding.jpg" alt="Jiayuan Ding" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Jiayuan Ding</div><div class="organizer-org">Hippocratic AI</div></div></a><a href="https://dbmi.hms.harvard.edu/people/pranav-rajpurkar" class="organizer-card"><img src="public/data/images/organizers/PranavRajpurkar_1.jpeg" alt="Pranav Rajpurkar" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Pranav Rajpurkar</div><div class="organizer-org">Harvard University</div></div></a><a href="https://jyhong.gitlab.io/" class="organizer-card"><img src="public/data/images/organizers/junyuan.jpeg" alt="Junyuan Hong" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Junyuan Hong</div><div class="organizer-org">National University of Singapore</div></div></a><a href="https://clvrai.com/web_lim/" class="organizer-card"><img src="public/data/images/organizers/Joseph J. Lim .png" alt="Joseph J. Lim" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Joseph J. Lim</div><div class="organizer-org">KAIST</div></div></a><a href="https://profiles.stanford.edu/ehsan-adeli" class="organizer-card"><img src="public/data/images/organizers/ehsan.jpg" alt="Ehsan Adeli" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Ehsan Adeli</div><div class="organizer-org">Stanford University</div></div></a><a href="https://www.linkedin.com/in/subho87/" class="organizer-card"><img src="public/data/images/organizers/subhabrata-mukherjee.jpeg" alt="Subhabrata Mukherjee" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Subhabrata Mukherjee</div><div class="organizer-org">Hippocratic AI</div></div></a><a href="https://profiles.stanford.edu/fei-fei-li" class="organizer-card"><img src="public/data/images/organizers/feifei.png" alt="Fei-Fei Li" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Fei-Fei Li</div><div class="organizer-org">Stanford University</div></div></a><a href="https://ischool.utexas.edu/profiles/ying-ding" class="organizer-card"><img src="public/data/images/organizers/YingDing.jpg" alt="Ying Ding" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Ying Ding</div><div class="organizer-org">UT Austin</div></div></a></div>
+      </div>
+    </section>
+    <!-- Award Committee is pending confirmation.
+    <section class="fade-in genai-people-section">
+      <div class="container">
+        <h3 class="genai-subsection-title">Award Committee</h3>
+        <div class="organizers-grid genai-people-grid">
+          <div class="organizer-card genai-placeholder-card" aria-label="To be announced"><span class="genai-empty-photo" aria-hidden="true"></span><div class="organizer-info" aria-hidden="true"></div></div>
+        </div>
+      </div>
+    </section>
+    -->
+    <section id="student-organizers" class="fade-in genai-people-section">
+      <div class="container">
+        <h3 class="genai-subsection-title genai-people-section-heading">Student Organizers</h3>
+        <div class="organizers-grid genai-people-grid">
+          <a href="https://jiaweixu98.github.io/" class="organizer-card"><img src="public/data/images/student_organizers/jiaweixu.jpg" alt="Jiawei Xu" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Jiawei Xu</div><div class="organizer-org">UT Austin</div></div></a>
+          <a href="https://scholar.google.com/citations?user=N4ThRJoAAAAJ&amp;hl=en" class="organizer-card"><img src="public/data/images/student_organizers/jinrui fang.jpg" alt="Jingrui Fang" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Jingrui Fang</div><div class="organizer-org">UT Austin</div></div></a>
+          <a href="https://link7808.github.io/" class="organizer-card"><img src="public/data/images/student_organizers/Image.jpg" alt="Ziheng Zhang" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Ziheng Zhang</div><div class="organizer-org">UT Austin</div></div></a>
+          <a href="https://ai.stanford.edu/~xtiange/" class="organizer-card"><img src="public/data/images/student_organizers/tiange.jpg" alt="Tiange Xiang" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Tiange Xiang</div><div class="organizer-org">Stanford University</div></div></a>
+          <a href="https://www.yyixinwang.com/" class="organizer-card"><img src="public/data/images/student_organizers/wyx.jpg" alt="Yixin Wang" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Yixin Wang</div><div class="organizer-org">Stanford University</div></div></a>
+          <a href="https://sites.google.com/view/hyewon-jeong/" class="organizer-card"><img src="public/data/images/student_organizers/Hyewon Jeong.jpeg" alt="Hyewon Jeong" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Hyewon Jeong</div><div class="organizer-org">MIT</div></div></a>
+        </div>
+      </div>
+    </section>
+    <section class="fade-in genai-people-section">
+      <div class="container">
+        <h3 class="genai-subsection-title genai-people-section-heading">Local Organizing Committee</h3>
+        <div class="organizers-grid genai-people-grid">
+          <a href="https://shengliu66.github.io" class="organizer-card"><img src="public/data/images/local_com/sheng_liu.jpg" alt="Sheng Liu" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Sheng Liu</div><div class="organizer-org">Stanford University</div></div></a>
+          <a href="https://www.kevinychou.com" class="organizer-card"><img src="public/data/images/local_com/kevin.jpeg" alt="Kevin Y.C. Hou" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Kevin Y.C. Hou</div><div class="organizer-org">Sydney Medical School</div></div></a>
+          <a href="https://www.linkedin.com/in/matthew-shu/" class="organizer-card"><img src="public/data/images/local_com/mat_shu.jpeg" alt="Matthew Shu" class="organizer-photo"><span class="genai-profile-overlay" aria-hidden="true"><i class="bi bi-arrow-right"></i></span><div class="organizer-info"><div class="organizer-name">Matthew Shu</div><div class="organizer-org">University of Sydney</div></div></a>
+        </div>
+      </div>
+    </section>
+    <!-- Program Committee Section -->
+    <!-- Program Committee is pending confirmation.
+    <section id="committee" class="fade-in"><div class="container genai-section-copy"><div class="section-header-component"><div class="section-header-row"><span class="section-header-title">Program Committee</span><span class="section-header-subtitle">Confirmation status shown below</span></div></div><ul class="genai-pc-list"><li><strong>Yan Han</strong><span>Amazon</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Ajay Jaiswal</strong><span>Apple</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Michael Wornow</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Lukas Klein</strong><span>ETH Zurich</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Ashish Mehta</strong><span>Hippocratic AI</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Tanmay Laud</strong><span>Hippocratic AI</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Noah Lewis</strong><span>GT</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Song Wang</strong><span>UT Austin</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Kriti Aggarwal</strong><span>Hippocratic AI</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Kaixiong Zhou</strong><span>NCSU</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Carl Yang</strong><span>Emory</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Wei Jin</strong><span>Emory</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Jiayu Zhou</strong><span>UMich</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Miguel Fuentes</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Sarah Woldemariam</strong><span>UCSF</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Ziwei Yang</strong><span>UT Austin</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Ophelia Yin</strong><span>UCSF</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Zepeng Huo</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Monica Munnangi</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Hejie Cui</strong><span>Google</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Tianlong Chen</strong><span>UNC Chapel Hill</span><em class="genai-pc-status genai-pc-status-confirmed">Confirmed</em></li><li><strong>Jiliang Tang</strong><span>MSU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Tianhao Li</strong><span>UT Austin</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Akshay Swaminathan</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Han Xie</strong><span>Emory</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Jiaying Lu</strong><span>Emory</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Greg Holste</strong><span>UT Austin</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Suhana Bedi</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Kaidi Xu</strong><span>Drexel</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Qinbin Li</strong><span>UC Berkeley</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Chulin Xie</strong><span>UIUC</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Haobo Zhang</strong><span>MSU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Zhenglun Kong</strong><span>MIT</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Sheng Li</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Mohammad Reza Hosseinzadeh Taher</strong><span>ASU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Junbiao Li</strong><span>DUT</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yingwei Li</strong><span>Waymo LLC</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yifan Wu</strong><span>UPenn</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yongyi Lu</strong><span>GDUT</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Liangyu Chen</strong><span>NTU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Tianrui Liu</strong><span>Imperial</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Xiaoxiao Li</strong><span>UBC</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yuankai Huo</strong><span>Vanderbilt</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Kevin Ta</strong><span>Yale</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Thesath Nanayakkara</strong><span>Pitt</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Ling Luo</strong><span>DUT</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yixin Wang</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Juan Zhou</strong><span>NUS</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Prithwish Chakraborty</strong><span>Amazon</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Qinru Li</strong><span>UCSD</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Tongtong Su</strong><span>SEU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Ruishan Liu</strong><span>USC</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Md Mahfuzur Rahman</strong><span>GSU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Shantanu Ghosh</strong><span>BU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Syed Hasan Amin Mahmood</strong><span>Purdue</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Xuxi Chen</strong><span>UT Austin</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Wenxuan Li</strong><span>JHU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Junfei Xiao</strong><span>JHU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Ya Tang</strong><span>UMass</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Justin Engelmann</strong><span>Edinburgh</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Joseph Cohen</strong><span>Amazon</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Xiangru Tang</strong><span>Yale</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Shuang Li</strong><span>CUHK-SZ</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Mahed Abroshan</strong><span>Optum AI</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yahan Yang</strong><span>UPenn SEAS</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Satyapriya Krishna</strong><span>Harvard</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Kowshik Thopalli</strong><span>ASU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Ricards Marcinkevics</strong><span>ETH Zurich</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yasunobu Nohara</strong><span>Kumamoto</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Mehmet Gulum</strong><span>UofL</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yuxiang Lai</strong><span>SEU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Shuhao Fu</strong><span>UCLA</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Shiru Wang</strong><span>Dartmouth</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Riqiang Gao</strong><span>Siemens Healthineers</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yu-Cheng Chou</strong><span>JHU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Meirui Jiang</strong><span>CUHK</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Ruibin Feng</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Yixiong Chen</strong><span>JHU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Qi Chen</strong><span>USTC</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Bojian Hou</strong><span>UPenn</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Runyu Gao</strong><span>JHU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Weicheng Zhu</strong><span>NYU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Tuomas Oikarinen</strong><span>UCSD</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Wenying Deng</strong><span>Harvard</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Nidhi Rastogi</strong><span>RIT</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Sayantan Kumar</strong><span>WashU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Mohammad Ali Khan</strong><span>UCSD</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Puneet Kumar</strong><span>IIT Delhi</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Kaiwen Zha</strong><span>MIT</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Martin Norgaard</strong><span>Copenhagen</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Wenlong Deng</strong><span>UBC</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Tiancheng Lin</strong><span>SJTU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Qixin Hu</strong><span>HUST</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Jinzhen Hu</strong><span>JHU</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Nikita Moriakov</strong><span>Radboud UMC</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Karam Maher</strong><span>Cairo</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Sonish Sivarajkumar</strong><span>Pitt</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Xuelin Yang</strong><span>Stanford</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li><li><strong>Jie Liu</strong><span>CityU HK</span><em class="genai-pc-status genai-pc-status-pending">Pending confirmation</em></li></ul></div></section>
+
+    -->
+  </main>
+
+
+  <footer id="sponsors">
+    <div class="container">
+      <!-- Sponsors are pending confirmation.
+      <div class="footer-sponsors" aria-label="Workshop sponsors">
+        <div class="footer-sponsors-title">Sponsors</div>
+        <div class="sponsor-grid genai-sponsor-grid" aria-hidden="true"></div>
+      </div>
+      -->
+      <div class="genai-footer-columns"><div class="genai-footer-neurips-logo"><img src="public/neurips-navbar-logo.svg" alt="NeurIPS"></div><div><strong>Submission</strong><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health" target="_blank" rel="noopener noreferrer">Research Paper Track</a><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health_Position_Paper_Track" target="_blank" rel="noopener noreferrer">Position Paper Track</a><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health_Demonstration_Paper_Track" target="_blank" rel="noopener noreferrer">Demonstration Paper Track</a></div><div><strong>Past Events</strong><a href="https://genai4health.github.io/2024-NeurIPS/" target="_blank" rel="noopener noreferrer">GenAI4Health @ NeurIPS 2024</a><a href="https://genai4health.github.io/2025-NeurIPS/" target="_blank" rel="noopener noreferrer">GenAI4Health @ NeurIPS 2025</a><a href="https://sites.google.com/view/genai4health-aaai-2025" target="_blank" rel="noopener noreferrer">GenAI4Health @ AAAI 2025</a></div><div><strong>Important Dates</strong><span>Submissions: Sep 5, 2026</span><span>Notifications: Sep 29, 2026</span><span>NeurIPS: December 11-12, 2026</span></div><div><strong>Contact Us</strong><a href="mailto:genai4health@googlegroups.com">GenAI4Health: genai4health@googlegroups.com</a><a href="https://x.com/GenAI4Health" target="_blank" rel="noopener noreferrer">@GenAI4Health on X</a></div></div>
+      <p class="footer-text">Copyright &copy; NeurIPS 2026. All rights reserved | The Third Workshop on GenAI for Health: Agentic Systems, Clinical Trust, and Future Potential</p>
+    </div>
+  </footer>
+
+  <script src="styles/js/main.js"></script>
+</body>
+
+</html>
