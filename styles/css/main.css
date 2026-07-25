@@ -1644,6 +1644,18 @@ footer .container {
   width: min(100%, 520px);
 }
 
+.footer-sponsors .genai-sponsor-grid a {
+  min-height: 104px;
+  padding: var(--space-3) var(--space-4);
+  border-radius: 4px;
+  background: #f7f8f4;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.16);
+}
+
+.footer-sponsors .genai-sponsor-grid img {
+  max-height: 80px;
+}
+
 .footer-sponsors .sponsor-logo {
   min-height: 34px;
   opacity: 0.9;
