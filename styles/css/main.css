@@ -1638,6 +1638,12 @@ footer .container {
   padding: 0;
 }
 
+.footer-sponsors .genai-sponsor-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 180px));
+  justify-content: center;
+  width: min(100%, 520px);
+}
+
 .footer-sponsors .sponsor-logo {
   min-height: 34px;
   opacity: 0.9;
