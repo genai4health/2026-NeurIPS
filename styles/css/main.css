@@ -812,6 +812,77 @@ footer ul li::marker {
   font-size: var(--font-size-sm);
 }
 
+.genai-gold-sponsor-section {
+  padding-top: 0;
+}
+
+.genai-gold-sponsor-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-6);
+  max-width: 760px;
+  margin: var(--space-6) auto 0;
+  padding: var(--space-4) 0;
+  color: var(--text);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.genai-gold-sponsor-card:hover {
+  color: var(--accent-contrast);
+  background: linear-gradient(135deg, var(--color-primary), #b8d85b);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-xl);
+  transform: scale(1.1);
+}
+
+.genai-gold-sponsor-logo {
+  display: grid;
+  min-height: 166px;
+  place-items: center;
+  background: transparent;
+}
+
+.genai-gold-sponsor-logo img {
+  display: block;
+  width: min(100%, 350px);
+  max-height: 180px;
+  object-fit: contain;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.genai-gold-sponsor-card:hover .genai-gold-sponsor-logo img {
+  filter: brightness(0) invert(1);
+  transform: none;
+}
+
+.genai-gold-sponsor-copy span {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: #6f8d1d;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.genai-gold-sponsor-copy h3 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: clamp(1.95rem, 3.9vw, 2.75rem);
+}
+
+.genai-gold-sponsor-card:hover .genai-gold-sponsor-copy span {
+  color: var(--accent-contrast);
+}
+
+.genai-gold-sponsor-card:hover .genai-gold-sponsor-copy h3 {
+  color: var(--accent-contrast);
+}
+
 .genai-agenda-heading {
   padding: var(--space-4) 0 var(--space-2);
   color: var(--color-primary);
@@ -1215,6 +1286,22 @@ footer ul li::marker {
   .genai-track-panel {
     grid-template-columns: 1fr;
     gap: var(--space-4);
+  }
+
+  .genai-gold-sponsor-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    max-width: 420px;
+    padding: var(--space-4) 0;
+    text-align: center;
+  }
+
+  .genai-gold-sponsor-logo {
+    min-height: 150px;
+  }
+
+  .genai-gold-sponsor-card:hover {
+    transform: scale(1.03);
   }
 
   .genai-people-section-header .section-header-row {
