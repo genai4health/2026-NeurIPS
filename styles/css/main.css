@@ -1043,10 +1043,10 @@ footer ul li::marker {
 }
 
 #organizers .genai-people-grid {
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(3, 200px);
   justify-content: center;
   gap: var(--space-2);
-  max-width: calc(4 * 200px + 3 * var(--space-2));
+  max-width: calc(3 * 200px + 2 * var(--space-2));
   margin-right: auto;
   margin-left: auto;
 }
@@ -1065,6 +1065,12 @@ footer ul li::marker {
   background: var(--surface-muted);
   object-fit: cover;
   object-position: center;
+}
+
+#organizers .genai-profile-overlay,
+.genai-people-section .genai-profile-overlay {
+  height: 240px;
+  aspect-ratio: auto;
 }
 
 #organizers .genai-people-grid .genai-empty-photo {
@@ -1372,6 +1378,11 @@ footer ul li::marker {
 
   #organizers .genai-people-grid .organizer-photo,
   .genai-people-section .genai-people-grid .organizer-photo {
+    height: 132px;
+  }
+
+  #organizers .genai-profile-overlay,
+  .genai-people-section .genai-profile-overlay {
     height: 132px;
   }
 }
