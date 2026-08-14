@@ -1002,17 +1002,20 @@ footer ul li::marker {
 }
 
 #speakers .genai-people-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  justify-content: stretch;
-  gap: var(--space-4);
+  /* Five per row, so 13 speakers land as 5/5/3. Flex rather than grid so a
+     trailing partial row centers itself instead of orphaning cards on the left. */
+  --speaker-col: calc((100% - 4 * var(--space-4)) / 5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4) calc(var(--space-4) + 0.07 * var(--speaker-col));
   max-width: none;
   margin-right: auto;
   margin-left: auto;
 }
 
 #speakers .genai-speaker-card {
-  width: 93%;
-  justify-self: center;
+  flex: 0 0 calc(0.93 * var(--speaker-col));
   padding: 0;
 }
 
@@ -1336,7 +1339,6 @@ footer ul li::marker {
   }
 
   #speakers .genai-people-grid {
-    grid-template-columns: repeat(2, 130px);
     max-width: calc(2 * 130px + var(--space-4));
     gap: var(--space-4);
   }
@@ -1345,6 +1347,10 @@ footer ul li::marker {
   #speakers .genai-speaker-card .organizer-photo,
   #speakers .genai-speaker-card .genai-empty-photo {
     width: 130px;
+  }
+
+  #speakers .genai-speaker-card {
+    flex: 0 0 130px;
   }
 
   #speakers .genai-speaker-card .organizer-photo,
