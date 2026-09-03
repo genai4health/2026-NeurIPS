@@ -883,6 +883,70 @@ footer ul li::marker {
   color: var(--accent-contrast);
 }
 
+.genai-silver-sponsor-card {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.85fr) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-5);
+  max-width: 620px;
+  margin: var(--space-5) auto 0;
+  padding: var(--space-3) 0;
+  color: var(--text);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+}
+
+.genai-silver-sponsor-card:hover {
+  color: var(--accent-contrast);
+  background: linear-gradient(135deg, #78838e, #b9c0c6);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  transform: scale(1.045);
+}
+
+.genai-silver-sponsor-logo {
+  display: grid;
+  min-height: 118px;
+  place-items: center;
+}
+
+.genai-silver-sponsor-logo img {
+  display: block;
+  width: min(100%, 220px);
+  max-height: 56px;
+  object-fit: contain;
+  filter: invert(1) grayscale(1);
+  transition: filter var(--transition-fast), transform var(--transition-fast);
+}
+
+.genai-silver-sponsor-card:hover .genai-silver-sponsor-logo img {
+  filter: none;
+  transform: scale(1.03);
+}
+
+.genai-silver-sponsor-copy span {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: #6d7780;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.genai-silver-sponsor-copy h3 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: clamp(1.55rem, 3.1vw, 2.05rem);
+}
+
+.genai-silver-sponsor-card:hover .genai-silver-sponsor-copy span,
+.genai-silver-sponsor-card:hover .genai-silver-sponsor-copy h3 {
+  color: var(--accent-contrast);
+}
+
 .genai-agenda-heading {
   padding: var(--space-4) 0 var(--space-2);
   color: var(--color-primary);
@@ -1302,6 +1366,14 @@ footer ul li::marker {
     gap: var(--space-4);
     max-width: 420px;
     padding: var(--space-4) 0;
+    text-align: center;
+  }
+
+  .genai-silver-sponsor-card {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+    max-width: 360px;
+    padding: var(--space-3) 0;
     text-align: center;
   }
 
