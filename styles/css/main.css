@@ -1832,6 +1832,12 @@ footer .container {
   max-height: 80px;
 }
 
+.footer-sponsors .genai-sponsor-grid .footer-sponsor-abaka img {
+  width: min(100%, 130px);
+  max-height: 38px;
+  filter: invert(1) grayscale(1);
+}
+
 .footer-sponsors .sponsor-logo {
   min-height: 34px;
   opacity: 0.9;
@@ -2688,6 +2694,45 @@ html[data-theme="dark"] .display-text-palatino {
   text-align: center;
 }
 
+.hero-deadline-notice {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  max-width: min(100%, 680px);
+  margin-top: 1rem;
+  padding: 0.7rem 0.95rem;
+  border: 1px solid rgba(200, 236, 104, 0.5);
+  border-radius: 4px;
+  background: rgba(4, 17, 15, 0.56);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  color: #f2f8df;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+  text-align: center;
+}
+
+.hero-deadline-notice i {
+  flex: 0 0 auto;
+  color: #c8ec68;
+  font-size: 1rem;
+}
+
+.genai-date-extension {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.12rem 0.35rem;
+  border-radius: 3px;
+  background: rgba(111, 141, 29, 0.14);
+  color: #587414;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 0.72em;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 html[data-theme="dark"] .hero-workshop-text {
   color: #ffffff;
 }
@@ -3086,6 +3131,13 @@ html[data-theme="dark"] .hero-workshop-text {
   .hero-workshop-text {
     margin-top: 1.05rem;
     font-size: clamp(1rem, 5vw, 1.35rem);
+  }
+
+  .hero-deadline-notice {
+    width: min(100%, 430px);
+    margin-top: 0.85rem;
+    padding: 0.65rem 0.8rem;
+    font-size: var(--font-size-xs);
   }
   #navbar {
     display: none;
