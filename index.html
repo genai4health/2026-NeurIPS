@@ -314,20 +314,22 @@
           <article class="bento-topic"><span class="bento-num">2</span><div class="bento-topic-content"><h4 class="bento-title">Trustworthy AI, Policy, Human-AI Collaboration &amp; Adoption</h4><p class="bento-desc">Approaches to ensuring the safety, robustness, and fairness of generative AI in medical contexts, and strategies for responsible real-world deployment. This track invites work at the intersection of technical rigor, clinical practice, and policy - from safety evaluation and red teaming to human oversight and the practical challenges of integrating AI into clinical workflows.</p><details class="genai-topic-details"><summary>Topics include, but are not limited to:</summary><ul><li>AI nurse copilots and clinical decision support</li><li>Surgical AI and safety-critical clinical applications</li><li>Safety benchmarks and evaluation frameworks for medical GenAI</li><li>Misuse detection and prevention</li><li>Red teaming and adversarial testing practices</li><li>Explainability, transparency, and interpretability in clinical AI</li><li>Ethical evaluation, health disparities, and bias mitigation</li><li>Human oversight and clinician-in-the-loop systems</li><li>Human-AI collaboration and trust calibration in care teams</li><li>Regulatory alignment (e.g., FDA) and international standards for AI in healthcare</li><li>Deployment, adoption, and change management in clinical workflows</li><li>Post-deployment monitoring and real-world performance evaluation</li></ul></details></div></article>
           <article class="bento-topic"><span class="bento-num">3</span><div class="bento-topic-content"><h4 class="bento-title">Toward 360&deg; AI Care: Ambient, Conversational &amp; Embodied Systems for Health</h4><p class="bento-desc">A forward-looking track on next-generation human-AI interaction paradigms in medicine. As AI moves beyond the chat box into clinics, homes, and everyday care, this track explores systems that listen, converse, remember, and act - spanning ambient intelligence, voice-first interfaces, and embodied agents that support patients, caregivers, and clinicians across the full arc of care.</p><details class="genai-topic-details"><summary>Topics include, but are not limited to:</summary><ul><li>Voice agents for patients and clinicians</li><li>Ambient scribes and passive clinical documentation</li><li>Conversational AI for care delivery, triage, and follow-up</li><li>Longitudinal patient interaction, memory, and continuity of care</li><li>AI companions, coaches, and virtual care navigators</li><li>Multimodal interactive systems combining speech, text, vision, and context</li><li>Context-aware assistants embedded in clinical environments</li><li>Care coordination across patients, caregivers, and providers</li><li>Embodied and agentic interfaces for healthcare tasks</li><li>Speech understanding and synthesis for medical dialogue (e.g., accents, disfluencies, emotion)</li><li>Turn-taking, interruption handling, and real-time interaction in clinical conversations</li><li>Accessibility and inclusive design for aging populations and patients with impairments</li><li>Evaluation of conversational and ambient systems in real-world care settings</li></ul></details></div></article>
         </div></div>
-        <!-- Camera-ready guidelines will be published after the submission deadline.
-        <h3 class="genai-cfp-camera-ready">Camera-Ready Submission Guidelines</h3>
+        <h3 class="genai-cfp-camera-ready" id="camera-ready">Camera-Ready Submission Guidelines</h3>
+        <p><strong>For accepted papers only.</strong> Camera-ready papers must include author information. The anonymous submission requirements below apply only to the initial review stage, not to the final version.</p>
+        <p><strong>Camera-ready deadline: October 25, 2026, 11:59 PM AoE (Anywhere on Earth).</strong></p>
+        <p><a class="genai-template-download" href="public/downloads/genai4health2026-camera-ready.zip" download><i class="bi bi-download" aria-hidden="true"></i> Download Camera-Ready LaTeX Template (ZIP)</a></p>
         <ul class="genai-list">
           <li><strong>Review Feedback:</strong> Please carefully address all reviewer feedback and thoroughly proofread your paper for clarity and consistency.</li>
-          <li><strong>LaTeX Format:</strong> Format your paper using the NeurIPS 2026 LaTeX package with the following workshop options: <code>\usepackage[dblblindworkshop,final]{neurips_2026}</code>.</li>
-          <li><strong>Workshop Title:</strong> Include the workshop title in your paper by adding: <code>\workshoptitle{The Third Workshop on GenAI for Health: Agentic Systems, Clinical Trust, and Future Potential}</code>.</li>
-          <li><strong>Public Availability:</strong> Your camera-ready paper will be made publicly available on OpenReview after TBA, unless you contact the organizers before the deadline to opt out.</li>
+          <li><strong>LaTeX Format:</strong> Use the workshop-specific template linked above. Upload the ZIP to Overleaf and compile <code>main.tex</code>, or follow the included README for local compilation. For an existing paper, copy both style files into your project and replace your NeurIPS package line with <code>\usepackage{genai4health_2026}</code>. Do not load <code>neurips_2026</code> separately; the workshop package automatically enables the final format.</li>
+          <li><strong>Author Information:</strong> Restore author names, affiliations, and acknowledgments in the final paper, subject to the Authorship Policy below. The camera-ready version must not be anonymous.</li>
+          <li><strong>Workshop Notice:</strong> The template automatically adds the first-page notice: GenAI for Health Workshop @ NeurIPS 2026, Sydney.</li>
+          <li><strong>Public Availability:</strong> Accepted papers will be made publicly available on OpenReview after the camera-ready stage, unless you contact the organizers before the camera-ready deadline to opt out.</li>
         </ul>
-        -->
         <h3 class="genai-cfp-important-dates">Important Dates</h3>
         <table class="important-dates">
           <tr class="important-date-row"><td>Paper Submission Deadline</td><td><strong>Sep 9, 2026 <span class="genai-date-extension">Extended</span></strong></td></tr>
           <tr class="important-date-row"><td>Acceptance Notification</td><td><strong>Sep 29, 2026</strong></td></tr>
-          <tr class="important-date-row"><td>Camera-ready Submission</td><td><strong>TBA</strong></td></tr>
+          <tr class="important-date-row"><td>Camera-ready Submission</td><td><strong>October 25, 2026</strong></td></tr>
           <tr class="important-date-row"><td>Workshop Day</td><td><strong>December 12, 2026</strong></td></tr>
         </table>
         <p class="genai-cfp-deadline-note"><strong>All deadlines are at 11:59 PM AoE (Anywhere on Earth).</strong></p>
@@ -359,6 +361,7 @@
           </div>
         </section>
         <h3>Submission Format Requirements</h3>
+        <p><strong>Initial submissions (review stage only).</strong> For accepted papers, follow the <a href="#camera-ready">Camera-Ready Submission Guidelines</a> above instead of the anonymous formatting instructions.</p>
         <ul class="genai-list">
           <li>You must format your submission using the <a href="https://neurips.cc/Conferences/2026/MainTrackHandbook" target="_blank" rel="noopener noreferrer">NeurIPS 2026 LaTeX style file</a>. The NeurIPS Paper Checklist is not required.</li>
           <li>Use <code>\usepackage{neurips_2026}</code> without options to ensure the submission is anonymous.</li>
@@ -372,6 +375,7 @@
           <li>Accepted workshop papers (after the camera-ready stage) will be made publicly available by default. However, authors may choose to opt out, in which case their paper (PDF file) will not appear on OpenReview. A reminder will be sent to authors before the camera-ready stage.</li>
         </ul>
         <h3>Review Process</h3>
+        <p>The following describes the initial review stage. Camera-ready papers are not anonymous.</p>
         <ul class="genai-list">
           <li><strong>Platform:</strong> All submissions are made through OpenReview (portal link to be posted on this page). All submitting authors need an OpenReview account; new account approval can take several days, so please register early.</li>
           <li><strong>Double-blind review:</strong> Submissions must be fully anonymized: no author names, affiliations, identifying acknowledgments, or non-anonymized links (e.g., a GitHub repository revealing authorship). Use <code>\usepackage{neurips_2026}</code> without options to keep the submission anonymous. Violations may lead to desk rejection.</li>
@@ -492,6 +496,7 @@
         </div>
       </div>
       <div class="genai-footer-columns"><div class="genai-footer-neurips-logo"><img src="public/neurips-navbar-logo.svg" alt="NeurIPS"></div><div><strong>Submission</strong><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health" target="_blank" rel="noopener noreferrer">Research Paper Track</a><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health_Position_Paper_Track" target="_blank" rel="noopener noreferrer">Position Paper Track</a><a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/GenAI4Health_Demonstration_Paper_Track" target="_blank" rel="noopener noreferrer">Demonstration Paper Track</a></div><div><strong>Past Events</strong><a href="https://genai4health.github.io/2024-NeurIPS/" target="_blank" rel="noopener noreferrer">GenAI4Health @ NeurIPS 2024</a><a href="https://genai4health.github.io/2025-NeurIPS/" target="_blank" rel="noopener noreferrer">GenAI4Health @ NeurIPS 2025</a><a href="https://sites.google.com/view/genai4health-aaai-2025" target="_blank" rel="noopener noreferrer">GenAI4Health @ AAAI 2025</a></div><div><strong>Important Dates</strong><span>Submissions: Sep 9, 2026, 11:59 PM AoE</span><span>Notifications: Sep 29, 2026</span><span>NeurIPS: December 12, 2026</span></div><div><strong>Contact Us</strong><a href="mailto:genai4health@googlegroups.com">GenAI4Health: genai4health@googlegroups.com</a><a href="https://x.com/GenAI4Health" target="_blank" rel="noopener noreferrer">@GenAI4Health on X</a></div></div>
+      <p class="genai-footer-camera-ready"><a href="#camera-ready">Camera-ready deadline: October 25, 2026, 11:59 PM AoE (Anywhere on Earth).</a></p>
       <p class="footer-text">Copyright &copy; NeurIPS 2026. All rights reserved | The Third Workshop on GenAI for Health: Agentic Systems, Clinical Trust, and Future Potential</p>
     </div>
   </footer>

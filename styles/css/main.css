@@ -681,6 +681,41 @@ html[data-theme="dark"] .health-hero .hero-workshop-text {
 
 #call-for-papers .genai-cfp-camera-ready {
   margin-top: var(--space-7);
+  scroll-margin-top: 120px;
+}
+
+#call-for-papers a.genai-template-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 4px;
+  background: #285a43;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#call-for-papers a.genai-template-download:hover {
+  background: #1d4432;
+}
+
+#call-for-papers a.genai-template-download:focus-visible {
+  outline: 3px solid #759b46;
+  outline-offset: 3px;
+}
+
+.genai-footer-camera-ready {
+  margin: 2rem 0 0;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.genai-footer-camera-ready a {
+  color: #a9c978;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 #call-for-papers .genai-cfp-important-dates {
