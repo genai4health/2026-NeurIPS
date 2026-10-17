@@ -81,12 +81,14 @@
    */
   let navbarlinks = select('#navbar .scrollto', true);
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200;
+    let position = window.scrollY + (select('#header')?.offsetHeight || 0) + 24;
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return;
       let section = select(navbarlink.hash);
       if (!section) return;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+      let sectionTop = 0;
+      for (let target = section; target; target = target.offsetParent) sectionTop += target.offsetTop;
+      if (position >= sectionTop && position < sectionTop + section.offsetHeight) {
         navbarlink.classList.add('active');
       } else {
         navbarlink.classList.remove('active');
@@ -102,7 +104,11 @@
   const scrollto = (el) => {
     let header = select('#header');
     let offset = header.offsetHeight;
-    let elementPos = select(el).offsetTop;
+    // Use layout coordinates so fade-in transforms do not shift the target.
+    let elementPos = 0;
+    for (let target = select(el); target; target = target.offsetParent) {
+      elementPos += target.offsetTop;
+    }
     window.scrollTo({
       top: elementPos - offset,
       behavior: 'smooth'
@@ -147,6 +153,7 @@
         navbarToggle.classList.toggle('bi-list');
         navbarToggle.classList.toggle('bi-x');
       }
+      history.replaceState(null, '', this.hash);
       scrollto(this.hash);
     }
   }, true);
@@ -155,6 +162,7 @@
    * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
+    if (window.location.hash === '#reviewers') history.replaceState(null, '', '#program-committee');
     if (window.location.hash) {
       if (select(window.location.hash)) {
         scrollto(window.location.hash);

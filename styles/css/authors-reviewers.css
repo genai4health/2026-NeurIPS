@@ -1,0 +1,45 @@
+/* Author resources and reviewer acknowledgments. */
+.author-faq-list { border-top: 1px solid var(--border); }
+.author-faq-list details { border-bottom: 1px solid var(--border); }
+.author-faq-list summary { padding: 1.15rem 0; font-weight: 650; cursor: pointer; color: var(--text); line-height: 1.5; }
+.author-faq-list summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.author-faq-answer { padding: 0 .5rem .7rem 1.2rem; }
+.author-faq-answer strong { color: var(--accent); }
+.reviewer-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .65rem 1.6rem; }
+.reviewer-list li { min-width: 0; line-height: 1.5; overflow-wrap: anywhere; }
+@media (max-width: 1000px) { .reviewer-list { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 700px) { .reviewer-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 400px) { .reviewer-list { grid-template-columns: minmax(0, 1fr); } }
+
+#faq, #program-committee, .author-faq-list details { scroll-margin-top: 110px; }
+.reviewer-list { gap: 1.3rem 1.6rem; }
+.reviewer-name { display: block; color: var(--text); font-weight: 600; }
+.reviewer-institution { display: block; margin-top: .2rem; color: var(--text-muted); font-size: .85rem; line-height: 1.45; }
+
+.pc-note { color: var(--text-muted); font-size: .95rem; margin-bottom: 1.5rem; }
+
+
+#committee-members li[hidden] { display: none; }
+.committee-toggle-row { display: flex; justify-content: center; margin-top: 1.75rem; }
+#committee-toggle { padding: .65rem 1.2rem; border: 1px solid var(--border); border-radius: 6px; background: var(--surface); color: var(--text); font: inherit; cursor: pointer; }
+#committee-toggle:hover { border-color: var(--accent); color: var(--accent); }
+#committee-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+
+/* Keep section navigation available on small screens. */
+@media (max-width: 991px) {
+  #header .navbar-container { flex-wrap: wrap; gap: .25rem; }
+  #header .navbar-title-group { width: 100% !important; }
+  #header #navbar { display: flex !important; position: static; min-width: 0; width: 100%; flex: 0 0 100%; justify-content: flex-start !important; overflow-x: auto; flex-wrap: nowrap; gap: .15rem; padding: .25rem 0; background: transparent; }
+  #header #navbar .nav-link { flex: 0 0 auto; white-space: nowrap; font-size: .8rem; padding: .4rem .5rem; }
+  #header .navbar-title { font-size: 1.15rem !important; }
+  .theme-switcher { position: fixed !important; top: auto !important; bottom: 1rem !important; right: 1rem !important; left: auto !important; transform: none !important; flex-direction: row; }
+}
+
+/* Long contact addresses and footer text must wrap on intermediate widths. */
+.genai-footer-columns > div { min-width: 0; }
+.genai-footer-columns a { overflow-wrap: anywhere; }
+.footer-text { white-space: normal; }
+
+/* Group author questions by task without adding another level of toggles. */
+.author-faq-group { margin-top: 2.25rem; }
+.author-faq-group-title { margin: 0 0 .75rem; font-size: 1.15rem; font-weight: 650; line-height: 1.4; color: var(--text); }
