@@ -1101,9 +1101,9 @@ footer ul li::marker {
 }
 
 #speakers .genai-people-grid {
-  /* Four per row, so 16 speakers land as 4/4/4/4. Flex rather than grid so a
+  /* Six per row, so 17 speakers land as 6/6/5. Flex rather than grid so a
      trailing partial row centers itself instead of orphaning cards on the left. */
-  --speaker-col: calc((100% - 3 * var(--space-4)) / 4);
+  --speaker-col: calc((100% - 5 * var(--space-4)) / 6);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1137,7 +1137,7 @@ footer ul li::marker {
 
 #speakers .genai-speaker-card .organizer-info {
   min-height: 4.6rem;
-  padding: var(--space-3) var(--space-4);
+  padding: var(--space-3) var(--space-2);
 }
 
 #organizers .container {
@@ -1446,23 +1446,27 @@ footer ul li::marker {
   }
 
   #speakers .genai-people-grid {
-    max-width: calc(2 * 130px + var(--space-4));
-    gap: var(--space-4);
+    max-width: calc(3 * 99px + 2 * var(--space-2));
+    gap: var(--space-2);
   }
 
   #speakers .genai-speaker-card,
   #speakers .genai-speaker-card .organizer-photo,
   #speakers .genai-speaker-card .genai-empty-photo {
-    width: 130px;
+    width: 99px;
+  }
+
+  #speakers .genai-speaker-card .organizer-info {
+    padding: var(--space-2);
   }
 
   #speakers .genai-speaker-card {
-    flex: 0 0 130px;
+    flex: 0 0 99px;
   }
 
   #speakers .genai-speaker-card .organizer-photo,
   #speakers .genai-speaker-card .genai-empty-photo {
-    height: 174px;
+    height: 132px;
   }
 
   #organizers .genai-people-grid,
