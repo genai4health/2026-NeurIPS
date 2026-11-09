@@ -1101,7 +1101,7 @@ footer ul li::marker {
 }
 
 #speakers .genai-people-grid {
-  /* Six per row, so 17 speakers land as 6/6/5. Flex rather than grid so a
+  /* Six per row, so 18 speakers land as 6/6/6. Flex rather than grid so a
      trailing partial row centers itself instead of orphaning cards on the left. */
   --speaker-col: calc((100% - 5 * var(--space-4)) / 6);
   display: flex;
